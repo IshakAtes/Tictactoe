@@ -5,6 +5,11 @@
 
 body{
     background-color: #898989;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
 }
 
 
@@ -55,4 +60,30 @@ tr td:last-child {
 
 .d-none {
     display: none;
+}
+
+
+/* Player Panel */
+.playerPanel {
+    display: flex;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.playerPanel div {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.playerPanel img {
+    width: 80px;
+    height: 80px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.inactivePlayer {
+    opacity: 0.5;
 }
