@@ -4,20 +4,22 @@ let currentShape = 'cross';
 
 
 function fillShape(id){
-    if(currentShape == 'cross'){
-        currentShape = 'circle';
-        document.getElementById('player-1').classList.add('inactivePlayer')
-        document.getElementById('player-2').classList.remove('inactivePlayer')
-    } else{
-        currentShape = 'cross';
-        document.getElementById('player-1').classList.remove('inactivePlayer')
-        document.getElementById('player-2').classList.add('inactivePlayer')
+    if(!fields[id]){
+        if(currentShape == 'cross'){
+            currentShape = 'circle';
+            document.getElementById('player-1').classList.add('inactivePlayer')
+            document.getElementById('player-2').classList.remove('inactivePlayer')
+        } else{
+            currentShape = 'cross';
+            document.getElementById('player-1').classList.remove('inactivePlayer')
+            document.getElementById('player-2').classList.add('inactivePlayer')
+        }
+    
+        fields[id] = currentShape;
+        console.log(fields);
+        draw();
+        checkForWin();
     }
-
-    fields[id] = currentShape;
-    console.log(fields);
-    draw();
-    checkForWin();
 }
 
 
@@ -30,7 +32,6 @@ function draw(){
         if(fields[i] == 'cross') {
             document.getElementById(`cross-${i}`).classList.remove('d-none');
         }
-        
     }
 }
 
