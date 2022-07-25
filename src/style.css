@@ -12,6 +12,11 @@ body{
     height: 100vh;
 }
 
+.d-none {
+    display: none;
+}
+
+
 
 /* Tictactoe table */
 table {
@@ -58,9 +63,6 @@ tr td:last-child {
     left: 15px;
 }
 
-.d-none {
-    display: none;
-}
 
 
 /* Player Panel */
@@ -87,6 +89,7 @@ tr td:last-child {
 .inactivePlayer {
     opacity: 0.5;
 }
+
 
 
 /* FINISH LINE */
@@ -130,4 +133,30 @@ tr td:last-child {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+
+/* RESTART BUTTON */
+.restartButton {
+    border: 1px solid rgb(12, 12, 12);
+    background-color: rgb(255, 56, 63);
+    z-index: 2;
+    width: 300px;
+    height: 100px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 40px;
+    position: absolute;
+    bottom: 100px;
+}
+
+.restartButton:hover {
+    border: 1px solid rgb(12, 12, 12);
+    background-color: rgb(28,11,127);
+    z-index: 2;
+    width: 300px;
+    height: 100px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 40px;
 }

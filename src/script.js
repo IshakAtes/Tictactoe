@@ -92,6 +92,23 @@ function checkForWin(){
         gameOver = true;
         setTimeout(function () {
             document.getElementById('gameOver').classList.remove('d-none');
+            document.getElementById('restartButton').classList.remove('d-none');
         }, 2000);
+    }
+}
+
+
+function restart(){
+    gameOver = false;
+    fields = [];
+    document.getElementById('gameOver').classList.add('d-none');
+    document.getElementById('restartButton').classList.add('d-none');
+    
+    for (let i = 0; i < 8; i++) {
+        document.getElementById('line-' + i).style.transform = 'scale(0)';
+    }
+    for (let i = 0; i < 9; i++) {
+        document.getElementById('circle-' + i).classList.add('d-none');
+        document.getElementById('cross-' + i).classList.add('d-none');
     }
 }
